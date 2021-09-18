@@ -1,0 +1,32 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--fueled-border-radius-l);
+  height: auto;
+  padding: var(--fueled-spacing-m);
+  background: var(--fueled-color-white);
+}
+
+.shadow-1 {
+  box-shadow: var(--fueled-shadow-1);
+}
+
+.shadow-2 {
+  box-shadow: var(--fueled-shadow-2);
+}
+
+.shadow-3 {
+  box-shadow: var(--fueled-shadow-3);
+}
+
+.shadow-4 {
+  box-shadow: var(--fueled-shadow-4);
+}
+
+.shadow-login {
+  box-shadow: var(--fueled-shadow-login);
+}
+
+.shadow-flat {
+  box-shadow: none;
+}
