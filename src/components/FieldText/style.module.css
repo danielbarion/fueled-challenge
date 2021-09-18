@@ -1,0 +1,129 @@
+.container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-bottom: var(--fueled-spacing-m);
+  width: 100%;
+}
+
+.field {
+  display: flex;
+  position: relative;
+  align-items: center;
+  width: 100%;
+}
+
+.inputWrapper {
+  width: 100%;
+}
+
+.input {
+  margin: 0;
+  width: 100%;
+  border: 1px solid var(--fueled-color-border-gray);
+  border-radius: var(--fueled-border-radius-s);
+  height: var(--fueled-size-field-height);
+  padding: var(--fueled-spacing-m);
+  box-sizing: border-box;
+  outline: none;
+  background-color: var(--fueled-color-white);
+  transition: all 200ms ease;
+  font: var(--fueled-font-field-label);
+  color: var(--fueled-color-black);
+  caret-color: var(--fueled-color-primary-500);
+}
+
+.input::-webkit-input-placeholder {
+  color: var(--fueled-color-secondary-500);
+  opacity: 0.5;
+}
+
+.input:-ms-input-placeholder {
+  color: var(--fueled-color-secondary-500);
+  opacity: 0.5;
+}
+
+.input::placeholder {
+  color: var(--fueled-color-secondary-500);
+  opacity: 0.5;
+}
+
+.prefixIcon,
+.sufixIcon {
+  color: var(--fueled-color-primary-400);
+  font-size: var(--fueled-font-size-xl);
+}
+
+.prefixIcon {
+  margin-right: var(--fueled-spacing-m);
+}
+
+.sufixIcon {
+  margin-left: var(--fueled-spacing-m);
+}
+
+.iconClickable {
+  cursor: pointer;
+}
+
+.disabled .prefixIcon,
+.disabled .sufixIcon {
+  fill: var(--fueled-color-neutral-300);
+}
+
+.disabled .input {
+  color: var(--fueled-color-secondary-500);
+  opacity: 0.6;
+  border-color: var(--fueled-color-border-gray);
+  background-color: var(--fueled-color-field-text-disabled-background);
+}
+
+.label {
+  font: var(--fueled-font-field-label);
+  color: var(--fueled-color-black);
+  position: relative;
+  bottom: var(--fueled-spacing-xs);
+}
+
+.supportText {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  bottom: 0;
+  transform: translateY(120%);
+  margin: 0;
+  padding: 0;
+  font: var(--fueled-font-field-support);
+  color: var(--fueled-color-neutral-600);
+}
+
+.disabled .supportText {
+  color: var(--fueled-color-neutral-300);
+}
+
+.focused .input {
+  border-color: var(--fueled-color-red);
+}
+
+.error,
+.error .prefixIcon,
+.error .sufixIcon,
+.error .supportText,
+.error .field .label {
+  color: var(--fueled-color-danger-500);
+}
+
+.error {
+  border-color: var(--fueled-color-danger-500);
+}
+
+.error.focused {
+  border-color: var(--fueled-color-danger-600);
+}
+
+.error .field .input {
+  border-color: var(--fueled-color-danger-500);
+  caret-color: var(--fueled-color-danger-500);
+}
