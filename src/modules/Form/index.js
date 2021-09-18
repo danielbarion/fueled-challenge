@@ -1,7 +1,7 @@
 import Button from "components/Button";
 import style from "./style.module.css";
 
-function App() {
+const Form = () => {
   return (
     <div className={style.form}>
       <Button label="Button Text" shadow="flat" icon="add" />
@@ -22,6 +22,6 @@ function App() {
       <Button shadow="flat" icon="add" format="circle" />
     </div>
   );
-}
+};
 
-export default App;
+export default Form;
