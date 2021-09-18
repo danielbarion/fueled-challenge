@@ -1,12 +1,12 @@
 import Container from "components/Container";
-import Card from "components/Card";
+import SingleForm from "components/SingleForm";
 import style from "./style.module.css";
 
 const Form = () => {
   return (
     <div className={style.form}>
       <Container className={style.container}>
-        <Card>lorem ipsum</Card>
+        <SingleForm />
       </Container>
     </div>
   );
