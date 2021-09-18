@@ -182,14 +182,18 @@ body {
   --fueled-color-info-900-contrast: #fff;
 
   /* others */
+  --fueled-color-black: #000;
   --fueled-color-white: #fff;
-  --fueled-color-white-hover: rgba(255, 255, 255, 0.2);
+  --fueled-color-white-hover: rgba(179, 102, 102, 0.2);
   --fueled-color-red: #ae0000;
   --fueled-color-fake-white: #f5f5f1;
   --fueled-color-fake-white-semi-transparent: rgba(245, 245, 241, 0.2);
+  --fueled-color-border-gray: rgba(0, 0, 0, 0.1);
+  --fueled-color-field-text-disabled-background: rgba(0, 0, 0, 0.04);
 
   /* spacings */
   --fueled-spacing-xxs: 4px;
+  --fueled-spacing-xs: 6px;
   --fueled-spacing-s: 8px;
   --fueled-spacing-sm: 12px;
   --fueled-spacing-m: 16px;
@@ -237,9 +241,7 @@ body {
   --fueled-font-field-support: var(--fueled-font-weight-regular)
     var(--fueled-font-size-xs) var(--fueled-font-family);
   --fueled-font-field-label: var(--fueled-font-weight-regular)
-    var(--fueled-font-size-m) var(--fueled-font-family);
-  --fueled-font-list-label: var(--fueled-font-weight-medium)
-    var(--fueled-font-size-m) var(--fueled-font-family);
+    var(--fueled-font-size-xs) var(--fueled-font-family);
 
   /* border radius */
   --fueled-border-radius-s: 4px;
@@ -254,9 +256,7 @@ body {
 
   /* general sizes */
   --fueled-size-nav-height: 72px;
-  --fueled-size-field-height-container: 52px;
-  --fueled-size-field-height-wrapper: 42px;
-  --fueled-size-field-height: 36px;
+  --fueled-size-field-height: 52px;
   --fueled-size-field-select-option-height: 35px;
   --fueled-size-button-height: 40px;
   --fueled-size-button-height-circular: 32px;
