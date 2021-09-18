@@ -89,8 +89,8 @@
 }
 
 .tertiary {
-  color: var(--fueled-color-primary-500);
-  background: var(--fueled-color-white);
+  color: var(--fueled-color-white);
+  background: var(--fueled-color-fake-white-semi-transparent);
 }
 
 .tertiary.bordered {

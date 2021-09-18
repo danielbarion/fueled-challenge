@@ -1,9 +1,7 @@
 .nav {
   display: grid;
   grid-template-areas: "logo title auth";
-  grid-template-columns: var(--fueled-spacing-xxl) auto var(
-      --fueled-spacing-xxl
-    );
+  grid-template-columns: var(--fueled-spacing-xxl) 1fr auto;
   align-items: center;
   height: var(--fueled-size-nav-height);
   width: 100%;
@@ -20,4 +18,9 @@
   text-align: center;
   color: var(--fueled-color-white);
   font-weight: var(--fueled-font-weight-bold);
+}
+
+.auth {
+  grid-area: auth;
+  margin-right: calc(var(--fueled-spacing-l) - var(--fueled-spacing-xxs));
 }
