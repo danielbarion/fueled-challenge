@@ -7,6 +7,10 @@
   background: var(--fueled-color-white);
 }
 
+.shadow-default {
+  box-shadow: var(--fueled-shadow-0);
+}
+
 .shadow-1 {
   box-shadow: var(--fueled-shadow-1);
 }

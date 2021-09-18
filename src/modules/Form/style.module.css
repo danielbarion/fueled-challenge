@@ -3,3 +3,7 @@
   width: 100%;
   background-color: var(--fueled-color-fake-white);
 }
+
+.container {
+  padding-top: var(--fueled-spacing-xl);
+}
