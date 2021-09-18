@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { WrapComponentWithAppStateConsumer } from "store/context";
+import { Link } from "react-router-dom";
 import Button from "components/Button";
 import Logo from "components/Logo";
 import Typography from "components/Typography";
@@ -13,13 +14,22 @@ const Navbar = ({ className, context }) => {
   return (
     <nav className={classNames(style.nav, className)}>
       <span className={style.logo}>
-        <Logo />
+        <Link to="/">
+          <Logo />
+        </Link>
       </span>
       <Typography className={style.title} element="span" variant="displayL">
         {formTitle}
       </Typography>
       <span className={style.auth}>
-        <Button label="Log In" shadow="flat" size="small" variant="tertiary" />
+        <Button
+          label="Log In"
+          shadow="flat"
+          size="small"
+          variant="tertiary"
+          element={Link}
+          to="/login"
+        />
       </span>
     </nav>
   );

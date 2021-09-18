@@ -8,6 +8,7 @@ import "./index.css";
 
 import Navbar from "components/Navbar";
 import Login from "./modules/Login";
+import Form from "./modules/Form";
 
 import reportWebVitals from "./reportWebVitals";
 
@@ -17,14 +18,11 @@ ReactDOM.render(
       <AppStateProvider>
         <Navbar />
         <Switch>
-          <Route path="/about">
-            <Login />
-          </Route>
-          <Route path="/users">
+          <Route path="/login">
             <Login />
           </Route>
           <Route path="/">
-            <Login />
+            <Form />
           </Route>
         </Switch>
       </AppStateProvider>

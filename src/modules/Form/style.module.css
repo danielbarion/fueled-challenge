@@ -1,8 +1,5 @@
-.login {
+.form {
   min-height: calc(100vh - var(--fueled-size-nav-height));
   width: 100%;
   background-color: var(--fueled-color-fake-white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
