@@ -1,7 +1,6 @@
 .card {
   display: flex;
   flex-direction: column;
-  border-radius: var(--fueled-border-radius-l);
   height: auto;
   padding: var(--fueled-spacing-m);
   background: var(--fueled-color-white);
