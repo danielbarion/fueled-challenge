@@ -1,0 +1,262 @@
+/* Roboto web font */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons&display=swap");
+
+html,
+body {
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+}
+
+@supports (font-variation-settings: normal) {
+  html,
+  body {
+    font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+      "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+  }
+}
+
+:root {
+  /* primary */
+  --fueled-color-primary-50: #f5e0e0;
+  --fueled-color-primary-100: #e7b3b3;
+  --fueled-color-primary-200: #d78080;
+  --fueled-color-primary-300: #c64d4d;
+  --fueled-color-primary-400: #ba2626;
+  --fueled-color-primary-500: #ae0000;
+  --fueled-color-primary-600: #a70000;
+  --fueled-color-primary-700: #9d0000;
+  --fueled-color-primary-800: #940000;
+  --fueled-color-primary-900: #840000;
+  --fueled-color-primary-A100: #ffb1b1;
+  --fueled-color-primary-A200: #ff7e7e;
+  --fueled-color-primary-A400: #ff4b4b;
+  --fueled-color-primary-A700: #ff3131;
+  --fueled-color-primary-50-contrast: #19121c;
+  --fueled-color-primary-100-contrast: #19121c;
+  --fueled-color-primary-200-contrast: #19121c;
+  --fueled-color-primary-300-contrast: #19121c;
+  --fueled-color-primary-400-contrast: #fff;
+  --fueled-color-primary-500-contrast: #fff;
+  --fueled-color-primary-600-contrast: #fff;
+  --fueled-color-primary-700-contrast: #fff;
+  --fueled-color-primary-800-contrast: #fff;
+  --fueled-color-primary-900-contrast: #fff;
+
+  /* secondary */
+  --fueled-color-secondary-50: #e3e3e3;
+  --fueled-color-secondary-100: #b9b9b9;
+  --fueled-color-secondary-200: #8b8b8b;
+  --fueled-color-secondary-300: #5c5c5c;
+  --fueled-color-secondary-400: #393939;
+  --fueled-color-secondary-500: #161616;
+  --fueled-color-secondary-600: #131313;
+  --fueled-color-secondary-700: #101010;
+  --fueled-color-secondary-800: #0c0c0c;
+  --fueled-color-secondary-900: #060606;
+  --fueled-color-secondary-A100: #ff4e4e;
+  --fueled-color-secondary-A200: #ff1b1b;
+  --fueled-color-secondary-A400: #e70000;
+  --fueled-color-secondary-A700: #ce0000;
+  --fueled-color-secondary-50-contrast: #19121c;
+  --fueled-color-secondary-100-contrast: #19121c;
+  --fueled-color-secondary-200-contrast: #19121c;
+  --fueled-color-secondary-300-contrast: #19121c;
+  --fueled-color-secondary-400-contrast: #19121c;
+  --fueled-color-secondary-500-contrast: #19121c;
+  --fueled-color-secondary-600-contrast: #fff;
+  --fueled-color-secondary-700-contrast: #fff;
+  --fueled-color-secondary-800-contrast: #fff;
+  --fueled-color-secondary-900-contrast: #fff;
+
+  /* neutral */
+  --fueled-color-neutral-50: #f8f7f8;
+  --fueled-color-neutral-100: #f3f2f4;
+  --fueled-color-neutral-200: #e5e3e6;
+  --fueled-color-neutral-300: #ccc8cf;
+  --fueled-color-neutral-400: #b9b3bc;
+  --fueled-color-neutral-500: #a097a4;
+  --fueled-color-neutral-600: #7d7283;
+  --fueled-color-neutral-700: #6a5d70;
+  --fueled-color-neutral-800: #53445b;
+  --fueled-color-neutral-900: #19121c;
+  --fueled-color-neutral-50-contrast: #19121c;
+  --fueled-color-neutral-100-contrast: #19121c;
+  --fueled-color-neutral-200-contrast: #19121c;
+  --fueled-color-neutral-300-contrast: #19121c;
+  --fueled-color-neutral-400-contrast: #19121c;
+  --fueled-color-neutral-500-contrast: #19121c;
+  --fueled-color-neutral-600-contrast: #19121c;
+  --fueled-color-neutral-700-contrast: #fff;
+  --fueled-color-neutral-800-contrast: #fff;
+  --fueled-color-neutral-900-contrast: #fff;
+
+  /* success */
+  --fueled-color-success-50: #f5fcf7;
+  --fueled-color-success-100: #f0fff5;
+  --fueled-color-success-200: #ccfce3;
+  --fueled-color-success-300: #8cfac7;
+  --fueled-color-success-400: #2ce69b;
+  --fueled-color-success-500: #00d68f;
+  --fueled-color-success-600: #00b887;
+  --fueled-color-success-700: #00997a;
+  --fueled-color-success-800: #007d6c;
+  --fueled-color-success-900: #004a42;
+  --fueled-color-success-50-contrast: #19121c;
+  --fueled-color-success-100-contrast: #19121c;
+  --fueled-color-success-200-contrast: #19121c;
+  --fueled-color-success-300-contrast: #19121c;
+  --fueled-color-success-400-contrast: #19121c;
+  --fueled-color-success-500-contrast: #19121c;
+  --fueled-color-success-600-contrast: #19121c;
+  --fueled-color-success-700-contrast: #19121c;
+  --fueled-color-success-800-contrast: #fff;
+  --fueled-color-success-900-contrast: #fff;
+
+  /* danger */
+  --fueled-color-danger-50: #fccaca;
+  --fueled-color-danger-100: #f36e6e;
+  --fueled-color-danger-200: #f15454;
+  --fueled-color-danger-300: #ef3939;
+  --fueled-color-danger-400: #ed1f1f;
+  --fueled-color-danger-500: #dd1212;
+  --fueled-color-danger-600: #c21010;
+  --fueled-color-danger-700: #a80e0e;
+  --fueled-color-danger-800: #8d0c0c;
+  --fueled-color-danger-900: #730909;
+  --fueled-color-danger-50-contrast: #19121c;
+  --fueled-color-danger-100-contrast: #19121c;
+  --fueled-color-danger-200-contrast: #19121c;
+  --fueled-color-danger-300-contrast: #19121c;
+  --fueled-color-danger-400-contrast: #19121c;
+  --fueled-color-danger-500-contrast: #fff;
+  --fueled-color-danger-600-contrast: #fff;
+  --fueled-color-danger-700-contrast: #fff;
+  --fueled-color-danger-800-contrast: #fff;
+  --fueled-color-danger-900-contrast: #fff;
+
+  /* warning */
+  --fueled-color-warning-50: #fae9be;
+  --fueled-color-warning-100: #f5ce69;
+  --fueled-color-warning-200: #f4c651;
+  --fueled-color-warning-300: #f2be3a;
+  --fueled-color-warning-400: #f1b722;
+  --fueled-color-warning-500: #ebad0f;
+  --fueled-color-warning-600: #d39c0e;
+  --fueled-color-warning-700: #bc8a0c;
+  --fueled-color-warning-800: #a4790b;
+  --fueled-color-warning-900: #8d6809;
+  --fueled-color-warning-50-contrast: #19121c;
+  --fueled-color-warning-100-contrast: #19121c;
+  --fueled-color-warning-200-contrast: #19121c;
+  --fueled-color-warning-300-contrast: #19121c;
+  --fueled-color-warning-400-contrast: #19121c;
+  --fueled-color-warning-500-contrast: #19121c;
+  --fueled-color-warning-600-contrast: #19121c;
+  --fueled-color-warning-700-contrast: #19121c;
+  --fueled-color-warning-800-contrast: #19121c;
+  --fueled-color-warning-900-contrast: #fff;
+
+  /* info */
+  --fueled-color-info-50: #f2f8ff;
+  --fueled-color-info-100: #f2f8ff;
+  --fueled-color-info-200: #c7e2ff;
+  --fueled-color-info-300: #94cbff;
+  --fueled-color-info-400: #42aaff;
+  --fueled-color-info-500: #0095ff;
+  --fueled-color-info-600: #006fd6;
+  --fueled-color-info-700: #0057c2;
+  --fueled-color-info-800: #0041a8;
+  --fueled-color-info-900: #002885;
+  --fueled-color-info-50-contrast: #19121c;
+  --fueled-color-info-100-contrast: #19121c;
+  --fueled-color-info-200-contrast: #19121c;
+  --fueled-color-info-300-contrast: #19121c;
+  --fueled-color-info-400-contrast: #19121c;
+  --fueled-color-info-500-contrast: #19121c;
+  --fueled-color-info-600-contrast: #fff;
+  --fueled-color-info-700-contrast: #fff;
+  --fueled-color-info-800-contrast: #fff;
+  --fueled-color-info-900-contrast: #fff;
+
+  /* others */
+  --fueled-color-white: #fff;
+  --fueled-color-white-hover: rgba(255, 255, 255, 0.2);
+  --fueled-color-red: #ae0000;
+  --fueled-color-fake-white: #f5f5f1;
+
+  /* spacings */
+  --fueled-spacing-xxs: 4px;
+  --fueled-spacing-s: 8px;
+  --fueled-spacing-sm: 12px;
+  --fueled-spacing-m: 16px;
+  --fueled-spacing-l: 24px;
+  --fueled-spacing-xl: 32px;
+  --fueled-spacing-xxl: 64px;
+
+  /* outside shadow */
+  --fueled-shadow-1: 0 4px 8px rgba(0, 0, 0, 0.15);
+  --fueled-shadow-2: 0 8px 24px rgba(0, 0, 0, 0.15);
+  --fueled-shadow-3: 0 16px 32px rgba(0, 0, 0, 0.15);
+  --fueled-shadow-4: 0 32px 64px rgba(0, 0, 0, 0.15);
+
+  /* icon sizes */
+  --fueled-size-icon-xs: 16px;
+  --fueled-size-icon-s: 20px;
+  --fueled-size-icon-m: 24px;
+  --fueled-size-icon-l: 32px;
+  --fueled-size-icon-xl: 40px;
+
+  /* fonts */
+  --fueled-font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
+
+  /* font size */
+  --fueled-font-size-xxs: 10px;
+  --fueled-font-size-xs: 12px;
+  --fueled-font-size-s: 14px;
+  --fueled-font-size-m: 16px;
+  --fueled-font-size-l: 18px;
+  --fueled-font-size-xl: 22px;
+  --fueled-font-size-xxl: 32px;
+  --fueled-font-size-xxxl: 48px;
+
+  /* font weight */
+  --fueled-font-weight-regular: 400;
+  --fueled-font-weight-medium: 500;
+  --fueled-font-weight-semibold: 600;
+  --fueled-font-weight-bold: 700;
+  --fueled-font-weight-black: 900;
+
+  /* font style */
+  --fueled-font-field-support: var(--fueled-font-weight-regular)
+    var(--fueled-font-size-xs) var(--fueled-font-family);
+  --fueled-font-field-label: var(--fueled-font-weight-regular)
+    var(--fueled-font-size-m) var(--fueled-font-family);
+  --fueled-font-list-label: var(--fueled-font-weight-medium)
+    var(--fueled-font-size-m) var(--fueled-font-family);
+
+  /* border radius */
+  --fueled-border-radius-s: 4px;
+  --fueled-border-radius-m: 8px;
+  --fueled-border-radius-l: 12px;
+  --fueled-border-radius-xl: 16px;
+  --fueled-border-radius-pill: 500px;
+  --fueled-border-radius-circle: 50%;
+
+  /* depths */
+  --fueled-depth-base: 1;
+
+  /* general sizes */
+  --fueled-size-nav-height: 72px;
+  --fueled-size-field-height-container: 52px;
+  --fueled-size-field-height-wrapper: 42px;
+  --fueled-size-field-height: 36px;
+  --fueled-size-field-select-option-height: 35px;
+  --fueled-size-button-height: 40px;
+  --fueled-size-button-width-circular: 32px;
+  --fueled-size-container-width: 1024px;
+}
