@@ -4,7 +4,6 @@
   justify-content: center;
   position: relative;
   width: max-content;
-  min-width: var(--fueled-size-button-width-circular);
   border: none;
   font-family: var(--fueled-font-family);
   cursor: pointer;
@@ -14,7 +13,6 @@
   outline: none;
   -webkit-tap-highlight-color: transparent;
   box-sizing: border-box;
-  min-height: var(--fueled-size-button-height);
   overflow: hidden;
 }
 
@@ -22,20 +20,38 @@
   pointer-events: none;
 }
 
+.default {
+  min-width: var(--fueled-size-button-width-circular);
+  min-height: var(--fueled-size-button-height);
+}
+
+.small {
+  min-height: var(--fueled-size-button-height-circular);
+}
+
 .normal {
   padding: 0 var(--fueled-spacing-s);
 }
 
-.circle {
+.default.circle {
   border-radius: 50%;
-  width: var(--fueled-size-button-width-circular);
   padding: 0;
+  width: var(--fueled-size-button-width-circular);
+  min-height: var(--fueled-size-button-height-circular);
 }
 
 .button .icon {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.label {
+  display: none;
+}
+
+.hasLabel .label {
+  display: flex;
 }
 
 .hasIcon .label {

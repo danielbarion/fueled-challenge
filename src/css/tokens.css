@@ -257,6 +257,7 @@ body {
   --fueled-size-field-height: 36px;
   --fueled-size-field-select-option-height: 35px;
   --fueled-size-button-height: 40px;
+  --fueled-size-button-height-circular: 32px;
   --fueled-size-button-width-circular: 32px;
   --fueled-size-container-width: 1024px;
 }
