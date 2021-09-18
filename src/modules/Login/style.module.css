@@ -1,0 +1,5 @@
+.login {
+  min-height: calc(100vh - var(--fueled-size-nav-height));
+  width: 100%;
+  background-color: var(--fueled-color-fake-white);
+}
