@@ -7,3 +7,16 @@
 .container {
   padding-top: var(--fueled-spacing-xl);
 }
+
+.addQuestionButton,
+.SaveAndShareButton {
+  width: 100%;
+}
+
+.addQuestionButton {
+  margin-top: var(--fueled-spacing-xl);
+}
+
+.SaveAndShareButton {
+  margin-top: var(--fueled-spacing-m);
+}
