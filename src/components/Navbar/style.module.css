@@ -13,6 +13,10 @@
   margin-left: var(--fueled-spacing-sm);
 }
 
+.authButton {
+  color: var(--fueled-color-white);
+}
+
 .titleWrapper {
   grid-area: title;
   display: flex;

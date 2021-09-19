@@ -72,6 +72,7 @@ const Navbar = ({ className, context }) => {
 
       <div className={style.auth}>
         <Button
+          className={style.authButton}
           label="Log In"
           shadow="flat"
           size="small"
