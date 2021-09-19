@@ -10,10 +10,10 @@ import style from "./style.module.css";
 const SingleForm = ({ className }) => {
   const [questionValue, setQuestionValue] = useState("");
   const [answerValue, setAnswerValue] = useState("");
-  const [answerSelectValue, setAnswerSelectValue] = useState(null);
   const [answerTypeList] = useState([
     { value: "short", label: "Short Answer" },
   ]);
+  const [answerSelectValue, setAnswerSelectValue] = useState(answerTypeList[0]);
 
   /**
    * Handle Input Values
@@ -50,7 +50,7 @@ const SingleForm = ({ className }) => {
         label="Fornecedor"
         placeholder="Selecione"
         options={answerTypeList}
-        selectedOption={answerSelectValue}
+        value={answerSelectValue}
         onChange={handleChangeAnswerTypeValue}
         className={style.answerTypeSelect}
       />
