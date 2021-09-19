@@ -6,6 +6,7 @@
   width: max-content;
   border: none;
   font-family: var(--fueled-font-family);
+  font-size: var(--fueled-font-size-xs);
   cursor: pointer;
   transition: all 200ms ease;
   text-transform: uppercase;
@@ -55,7 +56,7 @@
 }
 
 .hasIcon .label {
-  margin-left: var(--fueled-spacing-xxs);
+  margin-left: calc(var(--fueled-spacing-s) + (var(--fueled-spacing-xxs) / 2));
 }
 
 .flat {
@@ -89,16 +90,16 @@
 }
 
 .tertiary {
-  color: var(--fueled-color-white);
+  color: var(--fueled-color-primary-500);
   background: var(--fueled-color-fake-white-semi-transparent);
 }
 
 .tertiary.bordered {
-  border: 1px solid var(--fueled-color-primary-500);
+  border: 1px solid var(--fueled-color-border-gray);
 }
 
 .tertiary .icon {
-  color: var(--fueled-color-white);
+  color: var(--fueled-color-primary-500);
 }
 
 .quartiary {

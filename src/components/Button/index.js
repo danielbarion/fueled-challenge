@@ -33,6 +33,7 @@ const Button = ({
       [style.disabled]: disabled,
       [style.hasLabel]: Boolean(label),
       [style.hasIcon]: Boolean(icon),
+      [style.bordered]: bordered,
     }
   );
 
