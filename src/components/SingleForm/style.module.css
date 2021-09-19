@@ -1,2 +1,9 @@
-.singleForm {
+.answerTypeSelect {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .answerTypeSelect {
+    width: 40%;
+  }
 }
