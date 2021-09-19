@@ -50,7 +50,6 @@ class FieldSelect extends React.Component {
       innerRef,
       autofocus,
       options,
-      selectedOption,
       ...rest
     } = this.props;
 
@@ -90,7 +89,7 @@ class FieldSelect extends React.Component {
                 <option
                   className={style.option}
                   value={option.value}
-                  selected={selectedOption?.value === option.value}
+                  key={option.value}
                 >
                   {option.label}
                 </option>
@@ -108,7 +107,10 @@ class FieldSelect extends React.Component {
 FieldSelect.propTypes = {
   className: PropTypes.string,
   tabIndex: PropTypes.number,
-  value: PropTypes.string.isRequired,
+  value: PropTypes.shape({
+    label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  }).isRequired,
   label: PropTypes.string,
   placeholder: PropTypes.string,
   name: PropTypes.string.isRequired,
@@ -129,10 +131,6 @@ FieldSelect.propTypes = {
       value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     })
   ),
-  selectedOption: PropTypes.shape({
-    label: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  }),
 };
 
 FieldSelect.defaultProps = {
@@ -151,7 +149,6 @@ FieldSelect.defaultProps = {
   innerRef: null,
   autofocus: false,
   options: [],
-  selectedOption: null,
 };
 
 export default forwardRef((props, ref) => (
