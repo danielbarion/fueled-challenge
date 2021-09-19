@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import Icon from "../Icon";
+import Icon from "components/Icon";
 import style from "./style.module.css";
 
 class FieldText extends React.Component {
