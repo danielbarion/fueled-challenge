@@ -186,6 +186,7 @@ body {
   --fueled-color-white: #fff;
   --fueled-color-white-hover: rgba(179, 102, 102, 0.2);
   --fueled-color-red: #ae0000;
+  --fueled-color-fake-black: #414141;
   --fueled-color-fake-white: #f5f5f1;
   --fueled-color-fake-white-semi-transparent: rgba(245, 245, 241, 0.2);
   --fueled-color-border-gray: rgba(0, 0, 0, 0.1);
