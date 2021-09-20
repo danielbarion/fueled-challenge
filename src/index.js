@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AppStateProvider } from "store/context";
 
+import "css/reset.css";
 import "css/tokens.css";
 
 import Navbar from "components/Navbar";
