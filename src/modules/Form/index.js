@@ -16,7 +16,12 @@ const Form = ({ context }) => {
 
   const handleOnClickSaveAndShare = () => {
     let answerType = null;
-    const data = formQuestions.reduce((acc, item) => {
+
+    const formQuestionsWithoutMemoryReference = JSON.parse(
+      JSON.stringify(formQuestions)
+    );
+
+    const data = formQuestionsWithoutMemoryReference.reduce((acc, item) => {
       answerType = item.answerTypes.filter((option) => option.selected)[0]
         .value;
 
@@ -27,7 +32,7 @@ const Form = ({ context }) => {
       return acc;
     }, []);
 
-    console.log(JSON.stringify(data));
+    console.log(JSON.stringify(data, null, 2));
   };
 
   return (
