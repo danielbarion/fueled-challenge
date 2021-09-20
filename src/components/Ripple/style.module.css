@@ -10,8 +10,8 @@
   transform: scale(0);
   border-radius: 100%;
   position: absolute;
-  opacity: 0.75;
-  background-color: var(--wedding-color-white);
+  opacity: 0.5;
+  background-color: var(--fueled-color-white);
   animation-name: ripple;
   animation-duration: 500ms;
 }

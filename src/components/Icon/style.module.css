@@ -2,24 +2,6 @@
   box-sizing: border-box;
 }
 
-.container svg {
-  width: 100%;
-  height: 100%;
-}
-
-.path {
-  padding: var(--spacing-xxs);
-}
-
-.pathIcon {
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-}
-
 .xxxs {
   font-size: calc(var(--fueled-size-icon-xxxs));
   line-height: var(--fueled-size-icon-xxxs);
