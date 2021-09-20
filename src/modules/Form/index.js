@@ -1,3 +1,4 @@
+import PropTypes from "prop-types";
 import { WrapComponentWithAppStateConsumer } from "store/context";
 import Container from "components/Container";
 import SingleForm from "components/SingleForm";
@@ -80,6 +81,30 @@ const Form = ({ context }) => {
       </Container>
     </div>
   );
+};
+
+Form.propTypes = {
+  context: PropTypes.shape({
+    state: PropTypes.shape({
+      formQuestions: PropTypes.arrayOf(
+        PropTypes.shape({
+          question: PropTypes.string,
+          answerTypes: PropTypes.arrayOf(
+            PropTypes.shape({
+              value: PropTypes.string,
+              label: PropTypes.string,
+              selected: PropTypes.bool,
+            })
+          ).isRequired,
+          answer: PropTypes.string,
+        })
+      ),
+    }),
+    handleAddNewQuestion: PropTypes.func.isRequired,
+    handleOnChangeFormQuestion: PropTypes.func.isRequired,
+    handleRemoveQuestion: PropTypes.func.isRequired,
+    handleMoveQuestion: PropTypes.func.isRequired,
+  }),
 };
 
 export default WrapComponentWithAppStateConsumer(Form);

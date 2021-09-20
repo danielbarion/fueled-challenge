@@ -90,6 +90,7 @@ Navbar.propTypes = {
     state: PropTypes.shape({
       formTitle: PropTypes.string,
     }),
+    setFormTitle: PropTypes.func.isRequired,
   }).isRequired,
 };
 

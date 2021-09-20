@@ -22,10 +22,6 @@ const SingleForm = ({
   index,
   totalFormItems,
 }) => {
-  /**
-   * Handle Input Values
-   * @param {*} event
-   */
   const handleChangeValue = (event) => {
     const { name, value } = event.target;
 
@@ -118,6 +114,27 @@ const SingleForm = ({
 
 SingleForm.propTypes = {
   className: PropTypes.string,
+  id: PropTypes.string.isRequired,
+  answerSelectValue: PropTypes.shape({
+    value: PropTypes.string,
+    label: PropTypes.string,
+    selected: PropTypes.bool,
+  }).isRequired,
+  answerTypeList: PropTypes.arrayOf(
+    PropTypes.shape({
+      value: PropTypes.string,
+      label: PropTypes.string,
+      selected: PropTypes.bool,
+    })
+  ).isRequired,
+  answerValue: PropTypes.string.isRequired,
+  questionValue: PropTypes.string.isRequired,
+  handleOnChangeValue: PropTypes.func.isRequired,
+  handleRemoveQuestion: PropTypes.func.isRequired,
+  handleMoveQuestionUp: PropTypes.func.isRequired,
+  handleMoveQuestionDown: PropTypes.func.isRequired,
+  index: PropTypes.number.isRequired,
+  totalFormItems: PropTypes.number.isRequired,
 };
 
 SingleForm.defaultProps = {
