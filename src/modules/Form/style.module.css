@@ -6,6 +6,11 @@
 
 .container {
   padding-top: var(--fueled-spacing-xl);
+  padding-bottom: var(--fueled-spacing-xxl);
+}
+
+.singleForm {
+  margin-bottom: var(--fueled-spacing-m);
 }
 
 .addQuestionButton,

@@ -1,4 +1,3 @@
-import { useState } from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import Card from "components/Card";
@@ -7,14 +6,15 @@ import FieldSelect from "components/FieldSelect";
 import Divider from "components/Divider";
 import style from "./style.module.css";
 
-const SingleForm = ({ className }) => {
-  const [questionValue, setQuestionValue] = useState("");
-  const [answerValue, setAnswerValue] = useState("");
-  const [answerTypeList] = useState([
-    { value: "short", label: "Short Answer" },
-  ]);
-  const [answerSelectValue, setAnswerSelectValue] = useState(answerTypeList[0]);
-
+const SingleForm = ({
+  className,
+  id,
+  answerSelectValue,
+  answerTypeList,
+  answerValue,
+  questionValue,
+  handleOnChangeValue,
+}) => {
   /**
    * Handle Input Values
    * @param {*} event
@@ -22,16 +22,19 @@ const SingleForm = ({ className }) => {
   const handleChangeValue = (event) => {
     const { name, value } = event.target;
 
-    const formUtils = {
-      question: () => setQuestionValue(value),
-      answer: () => setAnswerValue(value),
-    };
-
-    formUtils[name]();
+    handleOnChangeValue({
+      id,
+      name,
+      value,
+    });
   };
 
-  const handleChangeAnswerTypeValue = async (selectedOption) => {
-    setAnswerSelectValue(selectedOption);
+  const handleChangeAnswerTypeValue = (selectedOption) => {
+    handleOnChangeValue({
+      id,
+      name: "answerType",
+      selectedOption,
+    });
   };
 
   return (
@@ -46,8 +49,8 @@ const SingleForm = ({ className }) => {
       />
       <Divider />
       <FieldSelect
-        name="provider"
-        label="Fornecedor"
+        name="answerType"
+        label="Answer"
         placeholder="Selecione"
         options={answerTypeList}
         value={answerSelectValue}
