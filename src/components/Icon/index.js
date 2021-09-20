@@ -1,16 +1,29 @@
 import PropTypes from "prop-types";
 import classNames from "classnames";
+import icons from "./icons/icons.json";
 import style from "./style.module.css";
 
 const Icon = ({ className, icon, size }) => {
+  const iconElement = icons[icon];
+
   const containerClassnames = classNames(
     className,
     style.container,
-    style[size],
-    "material-icons"
+    style[size]
   );
 
-  return <i className={containerClassnames}>{icon}</i>;
+  if (iconElement) {
+    return (
+      <span
+        className={containerClassnames}
+        dangerouslySetInnerHTML={{ __html: iconElement }}
+      />
+    );
+  }
+
+  return (
+    <i className={classNames(containerClassnames, "material-icons")}>{icon}</i>
+  );
 };
 
 Icon.propTypes = {

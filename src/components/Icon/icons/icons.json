@@ -1,0 +1,5 @@
+{
+  "Bin": "<svg width='22' height='22' viewBox='0 0 22 22' fill='none'><path d='M6.5 7V18.5H15.5V7H17V20H5V7H6.5ZM9.75 7.99609V17H8.25V7.99609H9.75ZM13.75 7.99609V17H12.25V7.99609H13.75ZM14 2.0033L15 4.0033H18V5.5033H4V4.0033H7L8 2.0033H14Z' fill='#AE0000'/></svg>",
+  "Down-Chevron": "<svg width='22' height='22' viewBox='0 0 22 22' fill='none'><path fill-rule='evenodd' clip-rule='evenodd' d='M17.771 6L19.6494 7.87888L10.8247 16.7036L2 7.87888L3.878 6L10.8247 12.9458L17.771 6Z' fill='#AE0000'/></svg>",
+  "Plus": "<svg width='22' height='22' viewBox='0 0 22 22' fill='none'><path fill-rule='evenodd' clip-rule='evenodd' d='M12 3.5V10H18.5V12H12V18.5H10V12H3.5V10H10V3.5H12Z' fill='#AE0000'/></svg>"
+}

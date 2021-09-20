@@ -1,7 +1,7 @@
 import React, { forwardRef } from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
-import ChevronDownIcon from "./chevron";
+import Icon from "components/Icon";
 import style from "./style.module.css";
 
 class FieldSelect extends React.Component {
@@ -95,7 +95,7 @@ class FieldSelect extends React.Component {
                 </option>
               ))}
             </select>
-            <ChevronDownIcon className={style.chevronIcon} />
+            <Icon icon="Down-Chevron" className={style.chevronIcon} />
           </span>
           <p className={style.supportText}>{error || hint}</p>
         </label>
