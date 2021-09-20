@@ -4,7 +4,6 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import { AppStateProvider } from "store/context";
 
 import "css/tokens.css";
-import "./index.css";
 
 import Navbar from "components/Navbar";
 import Login from "./modules/Login";
