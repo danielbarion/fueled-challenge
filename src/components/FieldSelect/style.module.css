@@ -39,21 +39,6 @@
   cursor: pointer;
 }
 
-.select::-webkit-input-placeholder {
-  color: var(--fueled-color-secondary-500);
-  opacity: 0.5;
-}
-
-.select:-ms-input-placeholder {
-  color: var(--fueled-color-secondary-500);
-  opacity: 0.5;
-}
-
-.select::placeholder {
-  color: var(--fueled-color-secondary-500);
-  opacity: 0.5;
-}
-
 .option {
   line-height: var(--fueled-spacing-m);
 }

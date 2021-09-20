@@ -36,9 +36,7 @@ class FieldSelect extends React.Component {
     const {
       value,
       label,
-      placeholder,
       name,
-      type,
       hint,
       disabled,
       readOnly,
@@ -57,7 +55,6 @@ class FieldSelect extends React.Component {
       [style.error]: Boolean(error),
       [style.focused]: Boolean(focused),
       [style.filled]: Boolean(value),
-      [style.hasPlaceholder]: Boolean(placeholder),
       [style.disabled]: Boolean(disabled),
     });
 
@@ -73,9 +70,7 @@ class FieldSelect extends React.Component {
               id={`select-${name}`}
               tabIndex={tabIndex}
               value={value}
-              type={type}
               name={name}
-              placeholder={placeholder}
               disabled={disabled}
               readOnly={readOnly}
               required={required}
@@ -97,7 +92,7 @@ class FieldSelect extends React.Component {
             </select>
             <Icon icon="Down-Chevron" className={style.chevronIcon} />
           </span>
-          <p className={style.supportText}>{error || hint}</p>
+          <span className={style.supportText}>{error || hint}</span>
         </label>
       </div>
     );
@@ -112,7 +107,6 @@ FieldSelect.propTypes = {
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
   }).isRequired,
   label: PropTypes.string,
-  placeholder: PropTypes.string,
   name: PropTypes.string.isRequired,
   hint: PropTypes.string,
   disabled: PropTypes.bool,
@@ -122,7 +116,6 @@ FieldSelect.propTypes = {
   onChange: PropTypes.func.isRequired,
   onFocus: PropTypes.func,
   onBlur: PropTypes.func,
-  type: PropTypes.oneOf(["text", "password", "email", "search"]),
   innerRef: PropTypes.func,
   autofocus: PropTypes.bool,
   options: PropTypes.arrayOf(
@@ -136,9 +129,7 @@ FieldSelect.propTypes = {
 FieldSelect.defaultProps = {
   className: null,
   tabIndex: null,
-  type: "text",
   label: "",
-  placeholder: "",
   hint: null,
   disabled: false,
   readOnly: false,

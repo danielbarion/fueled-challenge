@@ -54,7 +54,6 @@ const SingleForm = ({
       <FieldSelect
         name="answerType"
         label="Answer"
-        placeholder="Selecione"
         options={answerTypeList}
         value={answerSelectValue}
         onChange={handleChangeAnswerTypeValue}

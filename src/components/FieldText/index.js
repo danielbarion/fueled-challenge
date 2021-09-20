@@ -104,7 +104,7 @@ class FieldText extends React.Component {
               autoFocus={autofocus}
             />
           </span>
-          <p className={style.supportText}>{error || hint}</p>
+          <span className={style.supportText}>{error || hint}</span>
         </label>
         {hasSufixIcon ? (
           <Icon
