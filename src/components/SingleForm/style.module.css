@@ -2,6 +2,34 @@
   width: 100%;
 }
 
+.footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.actions {
+  display: grid;
+  grid-template-areas: "chevronDown chevronUp bin";
+  column-gap: var(--fueled-spacing-m);
+}
+
+.chevronDownIcon svg,
+.chevronUpIcon svg,
+.binIcon svg {
+  /** only using font-size var because that is a SVG) **/
+  width: var(--fueled-font-size-m);
+  height: var(--fueled-font-size-m);
+}
+
+.chevronDownIcon path,
+.chevronUpIcon path {
+  fill: var(--fueled-color-fake-black);
+}
+
+.chevronUpIcon svg {
+  transform: rotate(180deg);
+}
+
 @media (min-width: 768px) {
   .answerTypeSelect {
     width: 40%;

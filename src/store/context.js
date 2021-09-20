@@ -36,6 +36,37 @@ export const AppStateProvider = ({ children }) => {
     ]);
   };
 
+  const handleRemoveQuestion = (id) => {
+    setFormQuestions((currentValue) => [
+      ...currentValue.filter((item) => item.id !== id),
+    ]);
+  };
+
+  const handleMoveQuestion = (id, moveTo, currentIndex) => {
+    const newIndexResult = {
+      up: currentIndex - 1,
+      down: currentIndex + 1,
+    };
+    const newIndex = newIndexResult[moveTo];
+    const newFormQuestions = formQuestions.reduce((acc, item, index, array) => {
+      if (item.id !== id) {
+        if (newIndex === index && moveTo === "up") {
+          acc.push(array[currentIndex]);
+        }
+
+        acc.push(item);
+
+        if (newIndex === index && moveTo === "down") {
+          acc.push(array[currentIndex]);
+        }
+      }
+
+      return acc;
+    }, []);
+
+    setFormQuestions(newFormQuestions);
+  };
+
   const handleOnChangeFormQuestion = ({ id, name, value }) => {
     const newFormQuestions = formQuestions.map((item) => {
       if (item.id === id) {
@@ -66,6 +97,8 @@ export const AppStateProvider = ({ children }) => {
         setFormTitle,
         handleAddNewQuestion,
         handleOnChangeFormQuestion,
+        handleRemoveQuestion,
+        handleMoveQuestion,
       }}
     >
       {children}

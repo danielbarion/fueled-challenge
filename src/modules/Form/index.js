@@ -5,7 +5,13 @@ import Button from "components/Button";
 import style from "./style.module.css";
 
 const Form = ({ context }) => {
-  const { state, handleAddNewQuestion, handleOnChangeFormQuestion } = context;
+  const {
+    state,
+    handleAddNewQuestion,
+    handleOnChangeFormQuestion,
+    handleRemoveQuestion,
+    handleMoveQuestion,
+  } = context;
   const { formQuestions } = state;
 
   const handleOnClickSaveAndShare = () => {
@@ -28,7 +34,7 @@ const Form = ({ context }) => {
     <div className={style.form}>
       <Container className={style.container}>
         {formQuestions.length > 0 &&
-          formQuestions.map(({ id, question, answer, answerTypes }) => (
+          formQuestions.map(({ id, question, answer, answerTypes }, index) => (
             <SingleForm
               className={style.singleForm}
               id={id}
@@ -38,13 +44,24 @@ const Form = ({ context }) => {
               answerSelectValue={answerTypes[0]}
               answerTypeList={answerTypes}
               handleOnChangeValue={handleOnChangeFormQuestion}
+              handleRemoveQuestion={() => {
+                handleRemoveQuestion(id);
+              }}
+              handleMoveQuestionUp={() => {
+                handleMoveQuestion(id, "up", index);
+              }}
+              handleMoveQuestionDown={() => {
+                handleMoveQuestion(id, "down", index);
+              }}
+              index={index + 1}
+              totalFormItems={formQuestions.length}
             />
           ))}
         <Button
           className={style.addQuestionButton}
           label="Add Question"
           shadow="flat"
-          icon="add"
+          icon="Plus"
           variant="tertiary"
           bordered
           onClick={handleAddNewQuestion}

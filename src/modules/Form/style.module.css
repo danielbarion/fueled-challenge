@@ -16,10 +16,17 @@
 .addQuestionButton,
 .SaveAndShareButton {
   width: 100%;
+  font-weight: var(--fueled-font-weight-bold);
 }
 
 .addQuestionButton {
   margin-top: var(--fueled-spacing-xl);
+}
+
+.addQuestionButton svg {
+  /** only using font-size var because that is a SVG) **/
+  width: var(--fueled-font-size-s);
+  height: var(--fueled-font-size-s);
 }
 
 .SaveAndShareButton {

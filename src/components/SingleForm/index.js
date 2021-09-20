@@ -4,6 +4,8 @@ import Card from "components/Card";
 import FieldText from "components/FieldText";
 import FieldSelect from "components/FieldSelect";
 import Divider from "components/Divider";
+import Typography from "components/Typography";
+import Button from "components/Button";
 import style from "./style.module.css";
 
 const SingleForm = ({
@@ -14,6 +16,11 @@ const SingleForm = ({
   answerValue,
   questionValue,
   handleOnChangeValue,
+  handleRemoveQuestion,
+  handleMoveQuestionUp,
+  handleMoveQuestionDown,
+  index,
+  totalFormItems,
 }) => {
   /**
    * Handle Input Values
@@ -65,6 +72,46 @@ const SingleForm = ({
         autoComplete="off"
         disabled
       />
+      {totalFormItems > 1 && (
+        <>
+          <Divider />
+          <div className={style.footer}>
+            <Typography element="div" variant="bodyS">
+              {index} of {totalFormItems}
+            </Typography>
+            <div className={style.actions}>
+              {index < totalFormItems && (
+                <Button
+                  icon="Down-Chevron"
+                  className={style.chevronDownIcon}
+                  onClick={handleMoveQuestionDown}
+                  format="circle"
+                  variant="quartiary"
+                  shadow="flat"
+                />
+              )}
+              {index > 1 && (
+                <Button
+                  icon="Down-Chevron"
+                  className={style.chevronUpIcon}
+                  onClick={handleMoveQuestionUp}
+                  format="circle"
+                  variant="quartiary"
+                  shadow="flat"
+                />
+              )}
+              <Button
+                icon="Bin"
+                className={style.binIcon}
+                onClick={handleRemoveQuestion}
+                format="circle"
+                variant="quartiary"
+                shadow="flat"
+              />
+            </div>
+          </div>
+        </>
+      )}
     </Card>
   );
 };

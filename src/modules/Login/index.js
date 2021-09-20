@@ -11,7 +11,13 @@ const Login = () => {
         icon="add"
         variant="secondary"
       />
-      <Button label="Button Text" shadow="flat" icon="add" variant="tertiary" />
+      <Button
+        label="Button Text"
+        shadow="flat"
+        icon="add"
+        variant="tertiary"
+        bordered
+      />
       <Button
         label="Button Text"
         shadow="flat"
